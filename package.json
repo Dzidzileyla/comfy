@@ -1,0 +1,27 @@
+{
+  "name": "comfy",
+  "version": "1.0.0",
+  "description": "tsc",
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "lint": "eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dzidzileyla/comfy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dzidzileyla/comfy/issues"
+  },
+  "homepage": "https://github.com/Dzidzileyla/comfy#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.28",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "typescript": "^4.1.5"
+  }
+}
