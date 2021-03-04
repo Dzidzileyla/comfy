@@ -4,10 +4,15 @@
   "description": "tsc",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node index.ts",
+    "build": "rm -r dist/ & tsc",
+    "start": "node dist/index.js",
+    "clean": "rm -r dist/",
     "lint": "eslint . --ext .ts",
-    "test": "jest --coverage",
-    "tdd": "jest --watch"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "snyk:run": "snyk test",
+    "snyk:auth": "snyk auth"
   },
   "repository": {
     "type": "git",
@@ -32,6 +37,7 @@
     "jest": "^26.6.3",
     "jest-plugin-context": "^2.9.0",
     "jest-sonar-reporter": "^2.0.0",
+    "snyk": "^1.471.0",
     "ts-jest": "^26.5.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
