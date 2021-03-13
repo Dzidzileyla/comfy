@@ -12,7 +12,8 @@
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "snyk:run": "snyk test",
-    "snyk:auth": "snyk auth"
+    "snyk:auth": "snyk auth",
+    "ayakashi:run": "ayakashi run --clean -c ./ayakashi.config.js"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,8 @@
     "typescript": "^4.1.5"
   },
   "dependencies": {
+    "@ayakashi/types": "^1.0.0-beta7.1",
+    "ayakashi": "^1.0.0-beta7.1",
     "cors": "^2.8.5",
     "express-pino-logger": "^6.0.0",
     "pino": "^6.11.1",
