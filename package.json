@@ -12,8 +12,7 @@
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "snyk:run": "snyk test",
-    "snyk:auth": "snyk auth",
-    "ayakashi:run": "ayakashi run --clean -c ./ayakashi.config.js"
+    "snyk:auth": "snyk auth"
   },
   "repository": {
     "type": "git",
@@ -44,10 +43,13 @@
     "typescript": "^4.1.5"
   },
   "dependencies": {
-    "@ayakashi/types": "^1.0.0-beta7.1",
-    "ayakashi": "^1.0.0-beta7.1",
+    "@types/cheerio": "^0.22.28",
+    "@types/jsdom": "^16.2.7",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
     "cors": "^2.8.5",
     "express-pino-logger": "^6.0.0",
+    "jsdom": "^16.5.1",
     "pino": "^6.11.1",
     "tslib": "^1.14.1",
     "typescript-ioc": "^3.2.2",

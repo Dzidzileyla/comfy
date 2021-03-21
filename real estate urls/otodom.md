@@ -56,10 +56,10 @@ https://www.otodom.pl/sprzedaz/dom/pustak--cegla--beton-komorkowy--beton--wielka
 > wystepuje w na sprzedaz i wynajem
 
 ```
-https://www.otodom.pl/sprzedaz/dom/q-<OPIS>/?search%5Bdescription%5D=1
+https://www.otodom.pl/sprzedaz/dom/q-<OPIS>/?search[description]=1
 ```
 
-* [https://www.otodom.pl/sprzedaz/dom/q-test/?search%5Bdescription%5D=1](https://www.otodom.pl/sprzedaz/dom/q-test/?search%5Bdescription%5D=1)
+* [https://www.otodom.pl/sprzedaz/dom/q-test/?search[description]=1](https://www.otodom.pl/sprzedaz/dom/q-test/?search[description]=1)
 
 ## Zmienne jako query
 
@@ -68,7 +68,7 @@ https://www.otodom.pl/sprzedaz/dom/q-<OPIS>/?search%5Bdescription%5D=1
 > Opcja dostepna dla sprzedaz
 
 ```
-?search%5Bfilter_enum_market%5D=<secondary|primary>
+?search[filter_enum_market]=<secondary|primary>
 ```
 
 ### Cena od/do
@@ -76,8 +76,8 @@ https://www.otodom.pl/sprzedaz/dom/q-<OPIS>/?search%5Bdescription%5D=1
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bfilter_float_price%3Afrom%5D=<CENA>
-&search%5Bfilter_float_price%3Ato%5D=<CENA>
+?search[filter_float_price:from]=<CENA>
+&search[filter_float_price:to]=<CENA>
 ```
 
 ### Powierzchnia
@@ -85,8 +85,8 @@ https://www.otodom.pl/sprzedaz/dom/q-<OPIS>/?search%5Bdescription%5D=1
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bfilter_float_m%3Afrom%5D=<METRY>
-&search%5Bfilter_float_m%3Ato%5D=<METRY>
+?search[filter_float_m:from]=<METRY>
+&search[filter_float_m:to]=<METRY>
 ```
 
 ### Liczba pokoi
@@ -94,7 +94,7 @@ https://www.otodom.pl/sprzedaz/dom/q-<OPIS>/?search%5Bdescription%5D=1
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bfilter_enum_rooms_num%5D%5B0%5D=<POKOJE>
+?search[filter_enum_rooms_num][0]=<POKOJE>
 ```
 
 ### Powierzchnia dzialki
@@ -102,8 +102,8 @@ https://www.otodom.pl/sprzedaz/dom/q-<OPIS>/?search%5Bdescription%5D=1
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bfilter_float_terrain_area%3Afrom%5D=<POWIERZCHNIA>
-&search%5Bfilter_float_terrain_area%3Ato%5D=<POWIERZCHNIA>
+?search[filter_float_terrain_area:from]=<POWIERZCHNIA>
+&search[filter_float_terrain_area:to]=<POWIERZCHNIA>
 ```
 
 ### Rodzaj zabudowy
@@ -119,7 +119,7 @@ Rodzaje:
 * farm
 
 ```
-?search%5Bfilter_enum_building_type%5D%5B0%5D=<RODZAJ>
+?search[filter_enum_building_type][0]=<RODZAJ>
 ```
 
 ### Rok budowy
@@ -127,7 +127,7 @@ Rodzaje:
 > Opcja dostepna tylko gdy dom/mieszkanie jest na sprzedaz
 
 ```
-?search%5Bfilter_float_build_year%3Afrom%5D=<YEAR>&search%5Bfilter_float_build_year%3Ato%5D=<YEAR>
+?search[filter_float_build_year:from]=<YEAR>&search[filter_float_build_year:to]=<YEAR>
 ```
 
 ### Typ dachu
@@ -140,7 +140,7 @@ Rodzaje:
 * notany
 
 ```
-?search%5Bfilter_enum_roof_type%5D%5B0%5D=<TYP>
+?search[filter_enum_roof_type][0]=<TYP>
 ```
 
 ### Typy domow/typy ofert
@@ -148,10 +148,10 @@ Rodzaje:
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bfilter_enum_recreational%5D=1
-?search%5Bprivate_business%5D=private
-?search%5Bopen_day%5D=1
-?search%5Bexclusive_offer%5D=1
+?search[filter_enum_recreational]=1
+?search[private_business]=private
+?search[open_day]=1
+?search[exclusive_offer]=1
 ```
 
 ### Aktualnosc ogloszenia
@@ -165,10 +165,10 @@ Typy:
 * 14 dni == 14
 
 ```
-?search%5Bcreated_since%5D=1
-?search%5Bcreated_since%5D=3
-?search%5Bcreated_since%5D=7
-?search%5Bcreated_since%5D=14
+?search[created_since]=1
+?search[created_since]=3
+?search[created_since]=7
+?search[created_since]=14
 ```
 
 ### Numer ofety
@@ -176,7 +176,7 @@ Typy:
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bid%5D=1
+?search[id]=1
 ```
 
 ### Zdjecia
@@ -184,7 +184,7 @@ Typy:
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bphotos%5D=1
+?search[photos]=1
 ```
 
 ### Film
@@ -192,7 +192,7 @@ Typy:
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bmovie%5D=1
+?search[movie]=1
 ```
 
 ### Wirtualny spacer
@@ -200,7 +200,7 @@ Typy:
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bwalkaround_3dview%5D=1
+?search[walkaround_3dview]=1
 ```
 
 ### Media
@@ -219,7 +219,7 @@ Opcje:
 * cable_television
 
 ```
-?search%5Bfilter_enum_media_types%5D%5B0%5D=<TYP>
+?search[filter_enum_media_types][0]=<TYP>
 ```
 
 ### Dystans
@@ -227,7 +227,7 @@ Opcje:
 > wystepuje w na sprzedaz i wynajem
 
 ```
-search%5Bdist%5D=<DYSTANS>
+search[dist]=<DYSTANS>
 ```
 
 ### Wojewodztwa
@@ -235,7 +235,7 @@ search%5Bdist%5D=<DYSTANS>
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bregion_id%5D=<WOJEWODZTWO>
+?search[region_id]=<WOJEWODZTWO>
 ```
 
 ### Miasto
@@ -243,7 +243,7 @@ search%5Bdist%5D=<DYSTANS>
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bcity_id%5D=<MIASTO>
+?search[city_id]=<MIASTO>
 ```
 
 ### Powiat
@@ -251,5 +251,5 @@ search%5Bdist%5D=<DYSTANS>
 > wystepuje w na sprzedaz i wynajem
 
 ```
-?search%5Bsubregion_id%5D=<POWIAT>
+?search[subregion_id]=<POWIAT>
 ```
