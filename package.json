@@ -2,7 +2,7 @@
   "name": "comfy",
   "version": "1.0.0",
   "description": "tsc",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "build": "rm -r dist/ & tsc",
     "start": "node dist/index.js",
@@ -12,7 +12,8 @@
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "snyk:run": "snyk test",
-    "snyk:auth": "snyk auth"
+    "snyk:auth": "snyk auth",
+    "debug": "node --inspect -r ts-node/register index.ts"
   },
   "repository": {
     "type": "git",

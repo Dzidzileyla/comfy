@@ -1,10 +1,10 @@
-import express = require('express');
+import express from 'express';
 import { Server } from 'typescript-rest';
 import { AddressInfo } from 'net';
 
-import http = require('http');
-import path = require('path');
-import cors = require('cors');
+import http from 'http';
+import path from 'path';
+import cors from 'cors';
 
 export class ApiServer {
   private server: http.Server = null as any;
@@ -52,5 +52,4 @@ export class ApiServer {
       }
     });
   }
-
 }
