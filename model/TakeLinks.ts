@@ -3,8 +3,10 @@ import cheerio from 'cheerio';
 
 const webScrappingTest = async () => {
   const { data } = await axios.get(
-    'https://www.otodom.pl/sprzedaz/dom/wroclaw/?search%5Bregion_id%5D=1&search%5Bsubregion_id%5D=381&search%5Bcity_id%5D=39'
+    'https://www.otodom.pl/sprzedaz/dom/wroclaw/?search%5Bregion_id%5D=1&search%5Bsubregion_id%5D=381&search%5Bcity_id%5D=39&search%5Bdist%5D=15'
   );
+
+  console.log(data.length);
 
   const $ = cheerio.load(data);
 
