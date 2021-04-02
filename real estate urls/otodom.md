@@ -253,3 +253,17 @@ search[dist]=<DYSTANS>
 ```
 ?search[subregion_id]=<POWIAT>
 ```
+
+### Ktora strona z elementami
+
+```
+&page=<NUMBER_STRONY>
+```
+
+### Ilosc elementow na stronie
+
+> max to 72 elementy
+
+```
+&nrAdsPerPage=<LICZBA_ELEMENTOW_STRONIE>
+```

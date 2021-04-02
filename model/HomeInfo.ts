@@ -7,10 +7,10 @@ const webScrappingTest = async () => {
     'https://www.otodom.pl/pl/oferta/wroclaw-mokronos-dolny-super-oferta-ID4aFmj.html#db90a66f92'
   );
 
-  fs.writeFile('sample.html', data, function (err) {
-    if (err) return console.log(err);
-    console.log('Hello World > helloworld.txt');
-  });
+  // fs.writeFile('sample.html', data, function (err) {
+  //   if (err) return console.log(err);
+  //   console.log('Hello World > helloworld.txt');
+  // });
 
   const $ = cheerio.load(data);
 

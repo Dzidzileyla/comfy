@@ -25,8 +25,8 @@
       "type": "pwa-node",
       "request": "launch",
       "runtimeArgs": ["-r", "ts-node/register"],
-      "args": ["${workspaceFolder}/model/HomeInfo.ts"],
-      "console": "integratedTerminal"
+      "args": ["${workspaceFolder}/model/TakeLinks.ts"]
+      // "console": "integratedTerminal"
     }
   ]
 }
