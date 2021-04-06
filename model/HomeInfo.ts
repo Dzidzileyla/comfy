@@ -99,13 +99,41 @@ const webScrappingTest = async () => {
   const description = $('div[data-cy=adPageAdDescription]').find('p').text();
   console.log(description);
 
-  const security = $('h3[class="css-1tohpeb e9d1vc82"]').get(0);
-  console.log($(security).text());
-  console.log($(security).html());
+  const categories = $('div[class="css-1spf00e e9d1vc83"]');
 
-  // $(security).find('li').each((i,e) => {
-  //   console.log($(e).text());
-  // });
+  categories.each((i, e) => {
+    const category = $(e);
+    const nameOfCategory = category.find('h3[class="css-1tohpeb e9d1vc82"]');
+
+    // 'zabezpieczenia'
+    if (nameOfCategory.text() === 'zabezpieczenia') {
+      console.log(nameOfCategory.text());
+
+      category
+        .find(
+          'li[data-cy="ad.ad-features.categorized-list.item-with-category"]'
+        )
+        .each((i, e) => {
+          console.log($(e).text());
+        });
+    }
+
+    if (nameOfCategory.text() === 'ogrodzenie') {
+      console.log(nameOfCategory.text());
+
+      category
+        .find(
+          'li[data-cy="ad.ad-features.categorized-list.item-with-category"]'
+        )
+        .each((i, e) => {
+          console.log($(e).text());
+        });
+    }
+  });
+
+  const complexInfo = String($('script[id="__NEXT_DATA__"]').html());
+
+  console.log(JSON.parse(complexInfo).props.pageProps.lang);
 
   return null;
 };
