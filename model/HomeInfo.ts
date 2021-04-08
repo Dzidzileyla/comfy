@@ -131,9 +131,35 @@ const webScrappingTest = async () => {
     }
   });
 
-  const complexInfo = String($('script[id="__NEXT_DATA__"]').html());
+  const req = JSON.parse(String($('script[id="__NEXT_DATA__"]').html()));
+  console.log(String($('script[id="__NEXT_DATA__"]').html()));
+  console.log(req);
 
-  console.log(JSON.parse(complexInfo).props.pageProps.lang);
+  const { props } = req;
+  // console.log(props);
+  const { pageProps } = props;
+  console.log(pageProps);
+
+  // Opis ogloszenia
+  console.log(pageProps.ad.title);
+
+  // Address w wersji skroconej
+  console.log(JSON.stringify(pageProps.ad.location.address[0].value));
+
+  // Cena
+  console.log(JSON.stringify(pageProps.ad.target.Price));
+
+  // Cena Zakres
+  console.log(JSON.stringify(pageProps.ad.target.PriceRange));
+
+  // Cena za metr
+  console.log(JSON.stringify(pageProps.ad.target.Price_per_m));
+
+  // Powierzchnia dzialki
+  console.log(JSON.stringify(pageProps.ad.target.Terrain_area));
+
+  // Powierzchnia dzialki
+  console.log(JSON.stringify(pageProps.ad.target.Rooms_num));
 
   return null;
 };
